@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="Battery_Log" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q4o-rS-I4N">
+                                <rect key="frame" x="0.0" y="40" width="375" height="192.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Entry Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tax-E5-VZ1">
+                                        <rect key="frame" x="130" y="0.0" width="115" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7P-wZ-KPH">
+                                        <rect key="frame" x="149" y="30.5" width="77" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Bi-Weekly"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0x-XT-rWv">
+                                        <rect key="frame" x="156.5" y="73.5" width="62" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Monthly"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-nC-jri">
+                                        <rect key="frame" x="145" y="116.5" width="85" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Bi-Monthly"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-fl-sPx">
+                                        <rect key="frame" x="164" y="159.5" width="47" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Yearly"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDh-Pi-gMK">
+                                <rect key="frame" x="162" y="614" width="51" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Config"/>
+                                <connections>
+                                    <segue destination="aXR-C5-YA0" kind="presentation" identifier="ShowConfig" id="D1F-xH-Ayu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q4o-rS-I4N" secondAttribute="trailing" id="Qn5-tA-jvq"/>
+                            <constraint firstItem="TDh-Pi-gMK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="THg-WD-JGQ"/>
+                            <constraint firstItem="q4o-rS-I4N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TyB-5r-Joc"/>
+                            <constraint firstItem="q4o-rS-I4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ykd-Ck-uAZ"/>
+                            <constraint firstItem="TDh-Pi-gMK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q4o-rS-I4N" secondAttribute="bottom" constant="10" id="d9O-hI-LhH"/>
+                            <constraint firstItem="TDh-Pi-gMK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="p5x-PL-ygv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Config View Controller-->
+        <scene sceneID="stp-uF-kw1">
+            <objects>
+                <viewController storyboardIdentifier="Config" id="aXR-C5-YA0" customClass="ConfigViewController" customModule="Battery_Log" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xgR-XK-uLH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuration not set. Please set the initial configuration." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDx-Ee-tpj">
+                                <rect key="frame" x="10" y="40" width="355" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cbp-3W-O0u">
+                                <rect key="frame" x="10" y="614" width="355" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afg-pt-K1D">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyi-xz-HFz">
+                                        <rect key="frame" x="209" y="0.0" width="146" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDa-id-s5q" firstAttribute="trailing" secondItem="TDx-Ee-tpj" secondAttribute="trailing" constant="10" id="90L-GA-Gdk"/>
+                            <constraint firstItem="QDa-id-s5q" firstAttribute="trailing" secondItem="cbp-3W-O0u" secondAttribute="trailing" constant="10" id="Byh-R3-ojx"/>
+                            <constraint firstItem="TDx-Ee-tpj" firstAttribute="top" secondItem="QDa-id-s5q" secondAttribute="top" constant="20" id="GMR-GY-hlW"/>
+                            <constraint firstItem="TDx-Ee-tpj" firstAttribute="leading" secondItem="QDa-id-s5q" secondAttribute="leading" constant="10" id="P0R-7o-C2w"/>
+                            <constraint firstItem="cbp-3W-O0u" firstAttribute="leading" secondItem="QDa-id-s5q" secondAttribute="leading" constant="10" id="hv2-q0-ZUH"/>
+                            <constraint firstItem="QDa-id-s5q" firstAttribute="bottom" secondItem="cbp-3W-O0u" secondAttribute="bottom" constant="20" id="zPd-Gr-XmF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QDa-id-s5q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9U9-ld-o5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="456"/>
         </scene>
     </scenes>
 </document>

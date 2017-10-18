@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D0CFB7851F96716D005B7755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7841F96716D005B7755 /* AppDelegate.swift */; };
-		D0CFB7871F96716D005B7755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7861F96716D005B7755 /* ViewController.swift */; };
 		D0CFB78A1F96716D005B7755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CFB7881F96716D005B7755 /* Main.storyboard */; };
-		D0CFB78D1F96716D005B7755 /* Battery_Log.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB78B1F96716D005B7755 /* Battery_Log.xcdatamodeld */; };
 		D0CFB78F1F96716D005B7755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0CFB78E1F96716D005B7755 /* Assets.xcassets */; };
 		D0CFB7921F96716D005B7755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CFB7901F96716D005B7755 /* LaunchScreen.storyboard */; };
 		D0CFB79D1F96716D005B7755 /* Battery_LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB79C1F96716D005B7755 /* Battery_LogTests.swift */; };
+		D0CFB7A91F967855005B7755 /* BatteryLogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7A71F967855005B7755 /* BatteryLogModel.xcdatamodeld */; };
+		D0CFB7AB1F969D4B005B7755 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7AA1F969D4B005B7755 /* MainMenuViewController.swift */; };
+		D0CFB7AD1F96A094005B7755 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7AC1F96A094005B7755 /* ConfigViewController.swift */; };
+		D0CFB7C71F96AC8B005B7755 /* Commissioning+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7BF1F96AC8B005B7755 /* Commissioning+CoreDataClass.swift */; };
+		D0CFB7C81F96AC8B005B7755 /* Commissioning+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C01F96AC8B005B7755 /* Commissioning+CoreDataProperties.swift */; };
+		D0CFB7C91F96AC8B005B7755 /* LogEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C11F96AC8B005B7755 /* LogEntry+CoreDataClass.swift */; };
+		D0CFB7CA1F96AC8B005B7755 /* LogEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C21F96AC8B005B7755 /* LogEntry+CoreDataProperties.swift */; };
+		D0CFB7CB1F96AC8B005B7755 /* Config+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C31F96AC8B005B7755 /* Config+CoreDataClass.swift */; };
+		D0CFB7CC1F96AC8B005B7755 /* Config+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C41F96AC8B005B7755 /* Config+CoreDataProperties.swift */; };
+		D0CFB7CD1F96AC8B005B7755 /* EntryType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C51F96AC8B005B7755 /* EntryType+CoreDataClass.swift */; };
+		D0CFB7CE1F96AC8B005B7755 /* EntryType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFB7C61F96AC8B005B7755 /* EntryType+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +38,24 @@
 /* Begin PBXFileReference section */
 		D0CFB7811F96716D005B7755 /* Battery Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battery Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CFB7841F96716D005B7755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0CFB7861F96716D005B7755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0CFB7891F96716D005B7755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0CFB78C1F96716D005B7755 /* Battery_Log.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Battery_Log.xcdatamodel; sourceTree = "<group>"; };
 		D0CFB78E1F96716D005B7755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0CFB7911F96716D005B7755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0CFB7931F96716D005B7755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0CFB7981F96716D005B7755 /* Battery LogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Battery LogTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CFB79C1F96716D005B7755 /* Battery_LogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battery_LogTests.swift; sourceTree = "<group>"; };
 		D0CFB79E1F96716D005B7755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CFB7A81F967855005B7755 /* BatteryLogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BatteryLogModel.xcdatamodel; sourceTree = "<group>"; };
+		D0CFB7AA1F969D4B005B7755 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		D0CFB7AC1F96A094005B7755 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		D0CFB7BF1F96AC8B005B7755 /* Commissioning+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commissioning+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0CFB7C01F96AC8B005B7755 /* Commissioning+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commissioning+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0CFB7C11F96AC8B005B7755 /* LogEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0CFB7C21F96AC8B005B7755 /* LogEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0CFB7C31F96AC8B005B7755 /* Config+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0CFB7C41F96AC8B005B7755 /* Config+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D0CFB7C51F96AC8B005B7755 /* EntryType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D0CFB7C61F96AC8B005B7755 /* EntryType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntryType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +97,14 @@
 		D0CFB7831F96716D005B7755 /* Battery Log */ = {
 			isa = PBXGroup;
 			children = (
+				D0CFB7AE1F96A9DB005B7755 /* Model */,
 				D0CFB7841F96716D005B7755 /* AppDelegate.swift */,
-				D0CFB7861F96716D005B7755 /* ViewController.swift */,
 				D0CFB7881F96716D005B7755 /* Main.storyboard */,
+				D0CFB7AA1F969D4B005B7755 /* MainMenuViewController.swift */,
 				D0CFB78E1F96716D005B7755 /* Assets.xcassets */,
 				D0CFB7901F96716D005B7755 /* LaunchScreen.storyboard */,
 				D0CFB7931F96716D005B7755 /* Info.plist */,
-				D0CFB78B1F96716D005B7755 /* Battery_Log.xcdatamodeld */,
+				D0CFB7AC1F96A094005B7755 /* ConfigViewController.swift */,
 			);
 			path = "Battery Log";
 			sourceTree = "<group>";
@@ -97,6 +116,22 @@
 				D0CFB79E1F96716D005B7755 /* Info.plist */,
 			);
 			path = "Battery LogTests";
+			sourceTree = "<group>";
+		};
+		D0CFB7AE1F96A9DB005B7755 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0CFB7BF1F96AC8B005B7755 /* Commissioning+CoreDataClass.swift */,
+				D0CFB7C01F96AC8B005B7755 /* Commissioning+CoreDataProperties.swift */,
+				D0CFB7C11F96AC8B005B7755 /* LogEntry+CoreDataClass.swift */,
+				D0CFB7C21F96AC8B005B7755 /* LogEntry+CoreDataProperties.swift */,
+				D0CFB7C31F96AC8B005B7755 /* Config+CoreDataClass.swift */,
+				D0CFB7C41F96AC8B005B7755 /* Config+CoreDataProperties.swift */,
+				D0CFB7C51F96AC8B005B7755 /* EntryType+CoreDataClass.swift */,
+				D0CFB7C61F96AC8B005B7755 /* EntryType+CoreDataProperties.swift */,
+				D0CFB7A71F967855005B7755 /* BatteryLogModel.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +237,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0CFB7871F96716D005B7755 /* ViewController.swift in Sources */,
+				D0CFB7AB1F969D4B005B7755 /* MainMenuViewController.swift in Sources */,
+				D0CFB7CA1F96AC8B005B7755 /* LogEntry+CoreDataProperties.swift in Sources */,
+				D0CFB7C81F96AC8B005B7755 /* Commissioning+CoreDataProperties.swift in Sources */,
 				D0CFB7851F96716D005B7755 /* AppDelegate.swift in Sources */,
-				D0CFB78D1F96716D005B7755 /* Battery_Log.xcdatamodeld in Sources */,
+				D0CFB7CE1F96AC8B005B7755 /* EntryType+CoreDataProperties.swift in Sources */,
+				D0CFB7C71F96AC8B005B7755 /* Commissioning+CoreDataClass.swift in Sources */,
+				D0CFB7AD1F96A094005B7755 /* ConfigViewController.swift in Sources */,
+				D0CFB7C91F96AC8B005B7755 /* LogEntry+CoreDataClass.swift in Sources */,
+				D0CFB7A91F967855005B7755 /* BatteryLogModel.xcdatamodeld in Sources */,
+				D0CFB7CB1F96AC8B005B7755 /* Config+CoreDataClass.swift in Sources */,
+				D0CFB7CD1F96AC8B005B7755 /* EntryType+CoreDataClass.swift in Sources */,
+				D0CFB7CC1F96AC8B005B7755 /* Config+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,13 +494,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D0CFB78B1F96716D005B7755 /* Battery_Log.xcdatamodeld */ = {
+		D0CFB7A71F967855005B7755 /* BatteryLogModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D0CFB78C1F96716D005B7755 /* Battery_Log.xcdatamodel */,
+				D0CFB7A81F967855005B7755 /* BatteryLogModel.xcdatamodel */,
 			);
-			currentVersion = D0CFB78C1F96716D005B7755 /* Battery_Log.xcdatamodel */;
-			path = Battery_Log.xcdatamodeld;
+			currentVersion = D0CFB7A81F967855005B7755 /* BatteryLogModel.xcdatamodel */;
+			path = BatteryLogModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
